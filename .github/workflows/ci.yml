@@ -59,7 +59,7 @@ jobs:
 
     # checkout the repo
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     # install terraform
     - name: Setup Terraform
