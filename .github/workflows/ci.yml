@@ -43,7 +43,7 @@ jobs:
     # configure credentials
     - name: Configure AWS Credentials (stg)
       if: ${{ env.targetBranch == 'dev' || env.targetBranch == 'stg' }}
-      uses: aws-actions/configure-aws-credentials@v4
+      uses: aws-actions/configure-aws-credentials@v5
       with:
         aws-region: us-west-1
         role-to-assume: ${{ secrets.IAM_ROLE_ARN_STG }}
@@ -51,7 +51,7 @@ jobs:
 
     - name: Configure AWS Credentials (prd)
       if: ${{ env.targetBranch == 'prd' }}
-      uses: aws-actions/configure-aws-credentials@v4
+      uses: aws-actions/configure-aws-credentials@v5
       with:
         aws-region: us-west-1
         role-to-assume: ${{ secrets.IAM_ROLE_ARN_PRD }}
