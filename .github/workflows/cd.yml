@@ -17,7 +17,7 @@ jobs:
     outputs:
       terraform: ${{ steps.filter.outputs.terraform }}
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - uses: dorny/paths-filter@v3
       id: filter
       with:
@@ -58,7 +58,7 @@ jobs:
 
     # checkout the repo
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     # install terraform
     - name: Setup Terraform
