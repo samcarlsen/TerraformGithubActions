@@ -41,7 +41,7 @@ jobs:
     # configure credentials
     - name: Configure AWS Credentials (stg)
       if: ${{ github.ref_name == 'stg' }}
-      uses: aws-actions/configure-aws-credentials@v5
+      uses: aws-actions/configure-aws-credentials@v6
       with:
         aws-region: us-west-1
         role-to-assume: ${{ secrets.IAM_ROLE_ARN_STG }}
@@ -50,7 +50,7 @@ jobs:
 
     - name: Configure AWS Credentials (prd)
       if: ${{ github.ref_name == 'prd' }}
-      uses: aws-actions/configure-aws-credentials@v5
+      uses: aws-actions/configure-aws-credentials@v6
       with:
         aws-region: us-west-1
         role-to-assume: ${{ secrets.IAM_ROLE_ARN_PRD }}
